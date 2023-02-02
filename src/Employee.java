@@ -1,4 +1,14 @@
 public class Employee {
+    public Employee (String firstNameEmployer, String otchestvoEmployer,
+                     String secondNameEmployer, int numbersOtdels, int zarplataEmployers ) {
+        this.firstNameEmployer = firstNameEmployer;
+        this.otchestvoEmployer = otchestvoEmployer;
+        this.secondNameEmployer = secondNameEmployer;
+        this.numbersOtdels = numbersOtdels;
+        this.zarplataEmployers = zarplataEmployers;
+
+    }
+
     // присваиваем Айди новому сотруднику
     public static int idCreator(int id) {
         id = id++;
@@ -42,12 +52,7 @@ public class Employee {
     public void setZarplataEmployers(int zarplataEmployers) {
         this.zarplataEmployers = zarplataEmployers;
     }
-    public Employee (String firstNameEmployer, String otchestvoEmployer,
-                     String secondNameEmployer, int numbersOtdels, int zarplataEmployers ) {
-        this.numbersOtdels = numbersOtdels;
-        this.zarplataEmployers = zarplataEmployers;
 
-    }
 
 
 
