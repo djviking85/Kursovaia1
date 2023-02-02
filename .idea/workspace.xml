@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="130907de-2e14-4fce-9e26-515a5a4abc81" name="Changes" comment="Курсовая 1" />
+    <list default="true" id="130907de-2e14-4fce-9e26-515a5a4abc81" name="Changes" comment="Курсовая 1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675325215328</updated>
-      <workItem from="1675325217184" duration="6037000" />
+      <workItem from="1675325217184" duration="7382000" />
     </task>
     <task id="LOCAL-00001" summary="Курсовая 1">
       <created>1675325307244</created>
@@ -91,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675358855624</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Курсовая 1">
+      <created>1675359078686</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675359078686</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

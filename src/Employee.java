@@ -31,12 +31,9 @@ public class Employee {
     }
 
 
-
-
-
     ////////////////////////////////////////////////////////////////////////////////
     // указываем количество отделов 1-5 или сами отделы
-    public int[] getNumbersOtdels = {1, 2, 3, 4, 5,};
+    public int[] getNumbersOtdels = new int[5];
 
 
     public void setNumbersOtdels(int numbersOtdels) {
