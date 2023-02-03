@@ -1,6 +1,7 @@
 public class Employee {
-    public Employee (String firstNameEmployer, String otchestvoEmployer,
+    public Employee ( String firstNameEmployer, String otchestvoEmployer,
                      String secondNameEmployer, int numbersOtdels, int zarplataEmployers ) {
+        this.idCreator = idCreator;
         this.firstNameEmployer = firstNameEmployer;
         this.otchestvoEmployer = otchestvoEmployer;
         this.secondNameEmployer = secondNameEmployer;
@@ -10,9 +11,10 @@ public class Employee {
     }
 
     // присваиваем Айди новому сотруднику
-    public static int idCreator(int id) {
+    public static int idCreator; {
+        int id = 1;
         id = id++;
-        return id;
+
     }
     // указываем переменные на ФИО, номер отдела, зп сотрудника
     ////////////////////////////////////////////////////////////////
@@ -33,13 +35,16 @@ public class Employee {
 
     ////////////////////////////////////////////////////////////////////////////////
     // указываем количество отделов 1-5 или сами отделы
-    public int[] getNumbersOtdels = new int[5];
-
-
+    private int numbersOtdels;
     public void setNumbersOtdels(int numbersOtdels) {
         this.numbersOtdels = numbersOtdels;
     }
-    private int numbersOtdels;
+
+    public int getNumbersOtdels() {
+        return numbersOtdels;
+    }
+
+
 //////////////////////////////////////////////////////////////////
     // указываем зарплату сотрудников
     private int zarplataEmployers;
@@ -49,6 +54,7 @@ public class Employee {
     public void setZarplataEmployers(int zarplataEmployers) {
         this.zarplataEmployers = zarplataEmployers;
     }
+
 
 
 
