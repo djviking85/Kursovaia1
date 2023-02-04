@@ -17,7 +17,9 @@ public class Main {
         // Найти сотрудника с минимальной зарплатой.
         printMinZarplataEmployer();
         // Найти сотрудника с максимальной зарплатой.
-printMaxZarplataEmployer();
+        printMaxZarplataEmployer();
+        // Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
+        sredneeZnachenie();
     }
 private static void kolichestvoPersonala() {
         // метод на количество персонала
@@ -68,4 +70,17 @@ private static void kolichestvoPersonala() {
 
         System.out.println(maxZarplataEmpl);
     }
+    // Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
+    private static void   sredneeZnachenie() {
+        double sredne = 0;
+        double neNull = 0;
+        for (Employee employee : employers) {
+            if (employee != null)
+              sredne = sredne + employee.getZarplataEmployera();
+                neNull = neNull+1;
+
+        }
+        // доделать среднее арифм-ое - не воркает
+        System.out.println("среднее значение  - " + neNull);
     }
+}
