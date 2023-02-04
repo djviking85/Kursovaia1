@@ -1,79 +1,60 @@
 public class Employee {
-    public Employee ( String firstNameEmployer, String otchestvoEmployer,
-                     String secondNameEmployer, int numbersOtdels, int zarplataEmployers ) {
-        this.idCreator = idCreator;
-        this.firstNameEmployer = firstNameEmployer;
-        this.otchestvoEmployer = otchestvoEmployer;
-        this.secondNameEmployer = secondNameEmployer;
-        this.numbersOtdels = numbersOtdels;
-        this.zarplataEmployers = zarplataEmployers;
+    // создадим переменные, которые участвуют в конструкторе
+    private String nameEmployer;
+    private int numberOtdel;
+    private double zarplataEmployera;
 
+
+
+    private int id;
+    private static int idGenerate = 1;
+
+    // делаем геттеры и сеттеры
+
+    public String getNameEmployer() {
+        return nameEmployer;
     }
 
-    // присваиваем Айди новому сотруднику
-    public static int idCreator; {
-        int id = 1;
-        id = id++;
-
-
-    }
-    // указываем переменные на ФИО, номер отдела, зп сотрудника
-    ////////////////////////////////////////////////////////////////
-    // указываем имена сотруднков
-    private String firstNameEmployer;
-    public String getFirstNameEmployer() {
-        return firstNameEmployer;
-    }
-    private String otchestvoEmployer;
-    public String getOtchestvoEmployer() {
-        return otchestvoEmployer;
-    }
-    private String secondNameEmployer;
-    public String getSecondNameEmployer() {
-        return secondNameEmployer;
+    public void setNameEmployer(String nameEmployer) {
+        this.nameEmployer = nameEmployer;
     }
 
-
-    ////////////////////////////////////////////////////////////////////////////////
-    // указываем количество отделов 1-5 или сами отделы
-    private int numbersOtdels;
-    public void setNumbersOtdels(int numbersOtdels) {
-        this.numbersOtdels = numbersOtdels;
+    public int getNumberOtdel() {
+        return numberOtdel;
     }
 
-    public int getNumbersOtdels() {
-        return numbersOtdels;
+    public void setNumberOtdel(int numberOtdel) {
+        this.numberOtdel = numberOtdel;
     }
 
-
-//////////////////////////////////////////////////////////////////
-    // указываем зарплату сотрудников
-    private int zarplataEmployers;
-    public int getZarplataEmployers() {
-        return zarplataEmployers;
+    public double getZarplataEmployera() {
+        return zarplataEmployera;
     }
-    public void setZarplataEmployers(int zarplataEmployers) {
-        this.zarplataEmployers = zarplataEmployers;
+
+    public void setZarplataEmployera(int zarplataEmployera) {
+        this.zarplataEmployera = zarplataEmployera;
+
+    }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
 
+    public Employee (String nameEmployer, int numberOtdel, double zarplataEmployera) {
+        this.nameEmployer = nameEmployer;
+        this.numberOtdel = numberOtdel;
+        this.zarplataEmployera = zarplataEmployera;
+        this.id = idGenerate++;
+    }
 
-
-
-    // Добавить статическую переменную-счетчик, которая будет отвечать за id.
-    // Добавить в класс Employee поле id, которое проставляется из счетчика,
-    // а затем счетчик увеличивает свое значение.
-
-    // методы
-    // создаем ФИО
-    // создаем геттер по фио
-
-    // методы
-    // создаем номер отдела
-    // создаем геттер для номера отдела
-    // создаем сеттер для номера отдела
-
-
-
-    //создаем счетчик
+    @Override
+    public String toString() {
+        return " id сотрудника:" + this.id + ", Ф.И.О. - " + this.nameEmployer +
+                ", номер отдела: " + this.numberOtdel + " , зарплата сотрудника: " +
+                this.zarplataEmployera;
+    }
 }
