@@ -12,9 +12,9 @@ public class Main {
         kolichestvoPersonala();
     }
 private static void kolichestvoPersonala() {
-    for (int i = 0; i < employers.length; i++) {
-        if (employers != null) {
-            System.out.println(Arrays.toString(employers));
+    for (Employee employee : employers) {
+        if (employee != null) {
+            System.out.println(employee);
         }
 
     }

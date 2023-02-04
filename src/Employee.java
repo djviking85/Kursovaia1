@@ -53,7 +53,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return " id сотрудника:" + this.id + ", Ф.И.О. - " + this.nameEmployer +
+        return " id сотрудника: " + this.id + ", Ф.И.О. - " + this.nameEmployer +
                 ", номер отдела: " + this.numberOtdel + " , зарплата сотрудника: " +
                 this.zarplataEmployera;
     }
