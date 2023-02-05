@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="130907de-2e14-4fce-9e26-515a5a4abc81" name="Changes" comment="Курсовая 1 проверяем нормал курсовую.">
+    <list default="true" id="130907de-2e14-4fce-9e26-515a5a4abc81" name="Changes" comment="Курсовая 1 проверяем курсовую средней сложности">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +73,7 @@
       <updated>1675325215328</updated>
       <workItem from="1675325217184" duration="8915000" />
       <workItem from="1675421860181" duration="2604000" />
-      <workItem from="1675624330051" duration="2950000" />
+      <workItem from="1675624330051" duration="5023000" />
     </task>
     <task id="LOCAL-00001" summary="Курсовая 1">
       <created>1675325307244</created>
@@ -153,7 +152,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675625514069</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Курсовая 1 проверяем курсовую средней сложности">
+      <created>1675627542981</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675627542981</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Курсовая 1 проверяем курсовую средней сложности">
+      <created>1675627642608</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675627642608</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +176,7 @@
     <MESSAGE value="Курсовая 1" />
     <MESSAGE value="Курсовая 1 test branch 2" />
     <MESSAGE value="Курсовая 1 проверяем нормал курсовую." />
-    <option name="LAST_COMMIT_MESSAGE" value="Курсовая 1 проверяем нормал курсовую." />
+    <MESSAGE value="Курсовая 1 проверяем курсовую средней сложности" />
+    <option name="LAST_COMMIT_MESSAGE" value="Курсовая 1 проверяем курсовую средней сложности" />
   </component>
 </project>

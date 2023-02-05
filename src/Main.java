@@ -11,6 +11,8 @@ public class Main {
         employers[3] = new Employee("Петр Петрович Петров", 4, 18600);
         employers[4] = new Employee("Заяц Волчков Селедкин", 4, 10020);
         employers[5] = new Employee("Директор Важный Клен", 5, 200000);
+        employers[6] = new Employee("Работник Работающий Закопейкин", 4, 500);
+        employers[7] = new Employee("Неплохой Получаевич Зарплатов", 2, 105000);
         // Получить список всех сотрудников со всеми имеющимися по ним данными (вывести в консоль значения всех полей (toString)).
         kolichestvoPersonala();
         // Посчитать сумму затрат на зарплаты в месяц.
@@ -27,6 +29,17 @@ public class Main {
 
         // Проиндексировать зарплату (вызвать изменение зарплат у всех сотрудников на величину аргумента в %).
         indexacia(20);
+        // Получить в качестве параметра номер отдела (1–5) и найти (всего 6 методов):
+        // Сотрудника с минимальной зарплатой.
+        sotrudnikMinZp(4);
+        // Сотрудника с максимальной зарплатой.
+        sotrudnikMaxZp(2);
+        // Среднюю зарплату по отделу (учесть, что количество людей в отделе отличается от employees.length).
+        sredneeZnachenieOtdela(2);
+        // Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра.
+        // Напечатать всех сотрудников отдела (все данные, кроме отдела).
+
+
     }
 
     private static void kolichestvoPersonala() {
@@ -117,12 +130,56 @@ public class Main {
                     total = total + employee.getZarplataEmployera();
                     total = (total * (procent / 100))+total;
                 }
-
-                System.out.println("Месяц…  , сумма накоплений равна " + total + "… рублей");
             }
 
             System.out.println( "Если мы проиндексируем зарплаты на " + procent + " процентов, то мы получим бюджет на зарплату: " + total+ " рублей");
 
         }
+        // сложные
+    // Получить в качестве параметра номер отдела (1–5) и найти (всего 6 методов):
+    // Сотрудника с минимальной зарплатой.
+    private static void sotrudnikMinZp(int numberOtdel) {
+        double minZp = Double.MAX_VALUE;
+        Employee minZarplataEmpl = null;
+
+        for (Employee employee : employers) {
+            if (employee != null && employee.getNumberOtdel() == numberOtdel && employee.getZarplataEmployera() < minZp) {
+                minZp = employee.getZarplataEmployera();
+                minZarplataEmpl = employee;
+            }
+        }
+        System.out.println(minZarplataEmpl);
     }
+    // Сотрудника с макс зарплатой.
+    private static void sotrudnikMaxZp(int numberOtdel) {
+        double maxZp = Double.MIN_VALUE;
+        Employee maxZarplataEmpl = null;
+
+        for (Employee employee : employers) {
+            if (employee != null && employee.getNumberOtdel() == numberOtdel && employee.getZarplataEmployera() > maxZp) {
+                maxZp = employee.getZarplataEmployera();
+                maxZarplataEmpl = employee;
+            }
+        }
+
+        System.out.println(maxZarplataEmpl);
+    }
+    // Среднюю зарплату по отделу (учесть, что количество людей в отделе отличается от employees.length).
+    private static void sredneeZnachenieOtdela(int numberOtdel) {
+
+        int neNull = 0;
+        for (Employee employee : employers) {
+            if (employee != null && employee.getNumberOtdel() == numberOtdel)
+                neNull = neNull + 1;
+        }
+        double sredne = 0;
+        for (Employee employee : employers ) {
+            if (employee != null && employee.getNumberOtdel() == numberOtdel)
+                sredne = sredne + employee.getZarplataEmployera();
+        }
+        System.out.println("Среднее значение по "+ numberOtdel+ " отделу, равна " + sredne/neNull + " рублей");
+    }
+    // Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра.
+
+}
 
