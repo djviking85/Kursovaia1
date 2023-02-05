@@ -3,6 +3,7 @@ public class Employee {
     private String nameEmployer;
     private int numberOtdel;
     private double zarplataEmployera;
+    private double index;
 
 
 
@@ -33,8 +34,8 @@ public class Employee {
 
     public void setZarplataEmployera(int zarplataEmployera) {
         this.zarplataEmployera = zarplataEmployera;
-
     }
+
     public int getId() {
         return id;
     }
