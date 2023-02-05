@@ -37,7 +37,9 @@ public class Main {
         // Среднюю зарплату по отделу (учесть, что количество людей в отделе отличается от employees.length).
         sredneeZnachenieOtdela(2);
         // Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра.
+        indexaciaOtdela(10, 2);
         // Напечатать всех сотрудников отдела (все данные, кроме отдела).
+        allNamesOtdel(4);
 
 
     }
@@ -180,6 +182,27 @@ public class Main {
         System.out.println("Среднее значение по "+ numberOtdel+ " отделу, равна " + sredne/neNull + " рублей");
     }
     // Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра.
+    public static void indexaciaOtdela (double procent, int numberOtdel) {
+        double total = 0;
+        for (Employee employee : employers) {
+            if (employee != null && employee.getNumberOtdel() == numberOtdel) {
 
+                total = total + employee.getZarplataEmployera();
+                total = (total * (procent / 100))+total;
+            }
+        }
+
+        System.out.println( "Если мы проиндексируем зарплаты на " + procent + " процентов, в " +numberOtdel+ " отделе, то мы получим бюджет на зарплату: " + total + " рублей");
+
+    }
+    // Напечатать всех сотрудников отдела (все данные, кроме отдела).
+    private static void allNamesOtdel(int numberOtdel) {
+        for (Employee employee : employers) {
+            if (employee != null && employee.getNumberOtdel() == numberOtdel) {
+                System.out.println(" В " +numberOtdel+" отделе. id сотрудника = " + employee.getId()+ " Ф.И.О - " + employee.getNameEmployer()+ " , зарплата сотрудника - " + employee.getZarplataEmployera());
+            }
+
+        }
+    }
 }
 
