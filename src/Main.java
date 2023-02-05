@@ -13,6 +13,7 @@ public class Main {
         employers[5] = new Employee("Директор Важный Клен", 5, 200000);
         employers[6] = new Employee("Работник Работающий Закопейкин", 4, 500);
         employers[7] = new Employee("Неплохой Получаевич Зарплатов", 2, 105000);
+        employers[8] = new Employee("Силикон Силиконович Резинкин", 3, 2000);
         // Получить список всех сотрудников со всеми имеющимися по ним данными (вывести в консоль значения всех полей (toString)).
         kolichestvoPersonala();
         // Посчитать сумму затрат на зарплаты в месяц.
@@ -37,7 +38,7 @@ public class Main {
         // Среднюю зарплату по отделу (учесть, что количество людей в отделе отличается от employees.length).
         sredneeZnachenieOtdela(2);
         // Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра.
-        indexaciaOtdela(10, 2);
+        indexaciaOtdela(10, 3);
         // Напечатать всех сотрудников отдела (все данные, кроме отдела).
         allNamesOtdel(4);
 
@@ -187,8 +188,8 @@ public class Main {
         for (Employee employee : employers) {
             if (employee != null && employee.getNumberOtdel() == numberOtdel) {
 
-                total = total + employee.getZarplataEmployera();
-                total = (total * (procent / 100))+total;
+                total = total + employee.getZarplataEmployera(); // почему тут не выходит нужная сумма. как идет умножение???!
+                total = total + (total * (procent / 100));
             }
         }
 
