@@ -187,9 +187,11 @@ public class Main {
         double total = 0;
         for (Employee employee : employers) {
             if (employee != null && employee.getNumberOtdel() == numberOtdel) {
+            employee.setZarplataEmployera() = employee.getZarplataEmployera()+ employee.getZarplataEmployera()*(procent/100);
 
-                total = total + employee.getZarplataEmployera(); // почему тут не выходит нужная сумма. как идет умножение???!
-                total = total + (total * (procent / 100));
+                //     total = employee.getZarplataEmployera()+ employee.getZarplataEmployera()*(procent/100);
+                 // почему тут не выходит нужная сумма. как идет умножение???!
+          //      total = total + (total * (procent / 100));
             }
         }
 
