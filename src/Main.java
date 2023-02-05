@@ -20,6 +20,9 @@ public class Main {
         printMaxZarplataEmployer();
         // Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
         sredneeZnachenie();
+        // Получить Ф. И. О. всех сотрудников (вывести в консоль).
+        allNames();
+
     }
 private static void kolichestvoPersonala() {
         // метод на количество персонала
@@ -72,15 +75,28 @@ private static void kolichestvoPersonala() {
     }
     // Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
     private static void   sredneeZnachenie() {
-        double sredne = 0;
-        double neNull = 0;
+
+        int neNull = 0;
         for (Employee employee : employers) {
-            if (employee != null)
-              sredne = sredne + employee.getZarplataEmployera();
-                neNull = neNull+1;
+            if (employee != null )
+                neNull = neNull+1;}
+            double sredne = 0;
+            for (Employee employee : employers) {
+                if (employee != null )
+            sredne = sredne + employee.getZarplataEmployera();
+
 
         }
         // доделать среднее арифм-ое - не воркает
-        System.out.println("среднее значение  - " + neNull);
+        System.out.println("среднее значение по деньгам - " + sredne/ neNull);
     }
+    // Получить Ф. И. О. всех сотрудников (вывести в консоль).
+private static void allNames () {
+    for (Employee employee : employers) {
+        if (employee != null) {
+            System.out.println(employee.getNameEmployer());
+        }
+
+    }
+}
 }
