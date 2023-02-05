@@ -29,7 +29,7 @@ public class Main {
         // СЛОЖНО =========================================================================================
 
         // Проиндексировать зарплату (вызвать изменение зарплат у всех сотрудников на величину аргумента в %).
-        indexacia(20);
+        indexacia(10);
         // Получить в качестве параметра номер отдела (1–5) и найти (всего 6 методов):
         // Сотрудника с минимальной зарплатой.
         sotrudnikMinZp(4);
@@ -41,6 +41,7 @@ public class Main {
         indexaciaOtdela(10, 3);
         // Напечатать всех сотрудников отдела (все данные, кроме отдела).
         allNamesOtdel(4);
+
 
 
     }
@@ -111,7 +112,6 @@ public class Main {
 
 
         }
-        // доделать среднее арифм-ое - не воркает
         System.out.println("среднее значение по деньгам - " + sredne / neNull);
     }
 
@@ -124,21 +124,21 @@ public class Main {
 
         }
     }
+    // сложные ==========================================================
     // Проиндексировать зарплату (вызвать изменение зарплат у всех сотрудников на величину аргумента в %).
     public static void indexacia (double procent) {
         double total = 0;
         for (Employee employee : employers) {
             if (employee != null) {
-
-                    total = total + employee.getZarplataEmployera();
-                    total = (total * (procent / 100))+total;
-                }
+                employee.setZarplataEmployera(employee.getZarplataEmployera() + (employee.getZarplataEmployera() * (procent / 100)));
+                total = total + employee.getZarplataEmployera();
             }
+        }
+
 
             System.out.println( "Если мы проиндексируем зарплаты на " + procent + " процентов, то мы получим бюджет на зарплату: " + total+ " рублей");
 
         }
-        // сложные
     // Получить в качестве параметра номер отдела (1–5) и найти (всего 6 методов):
     // Сотрудника с минимальной зарплатой.
     private static void sotrudnikMinZp(int numberOtdel) {
@@ -185,17 +185,15 @@ public class Main {
     // Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра.
     public static void indexaciaOtdela (double procent, int numberOtdel) {
         double total = 0;
+
         for (Employee employee : employers) {
             if (employee != null && employee.getNumberOtdel() == numberOtdel) {
-            employee.setZarplataEmployera() = employee.getZarplataEmployera()+ employee.getZarplataEmployera()*(procent/100);
-
-                //     total = employee.getZarplataEmployera()+ employee.getZarplataEmployera()*(procent/100);
-                 // почему тут не выходит нужная сумма. как идет умножение???!
-          //      total = total + (total * (procent / 100));
+            employee.setZarplataEmployera(employee.getZarplataEmployera() + (employee.getZarplataEmployera() * (procent / 100)));
+                total = total + employee.getZarplataEmployera();
             }
         }
 
-        System.out.println( "Если мы проиндексируем зарплаты на " + procent + " процентов, в " +numberOtdel+ " отделе, то мы получим бюджет на зарплату: " + total + " рублей");
+        System.out.println(  "Если мы проиндексируем зарплаты на " + procent + " процентов, в " +numberOtdel+ " отделе, то мы получим бюджет на зарплату: " + total + " рублей");
 
     }
     // Напечатать всех сотрудников отдела (все данные, кроме отдела).
