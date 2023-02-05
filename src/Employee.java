@@ -3,7 +3,7 @@ public class Employee {
     private String nameEmployer;
     private int numberOtdel;
     private double zarplataEmployera;
-    private double index;
+
 
 
 
