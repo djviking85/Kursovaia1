@@ -126,10 +126,11 @@ public class Main {
     }
     // сложные ==========================================================
     // Проиндексировать зарплату (вызвать изменение зарплат у всех сотрудников на величину аргумента в %).
-    public static void indexacia (double procent) {
+    private static void indexacia (double procent) {
         double total = 0;
+
         for (Employee employee : employers) {
-            if (employee != null) {
+            if (employee != null ) {
                 employee.setZarplataEmployera(employee.getZarplataEmployera() + (employee.getZarplataEmployera() * (procent / 100)));
                 total = total + employee.getZarplataEmployera();
             }
@@ -183,7 +184,7 @@ public class Main {
         System.out.println("Среднее значение по "+ numberOtdel+ " отделу, равна " + sredne/neNull + " рублей");
     }
     // Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра.
-    public static void indexaciaOtdela (double procent, int numberOtdel) {
+    private static void indexaciaOtdela (double procent, int numberOtdel) {
         double total = 0;
 
         for (Employee employee : employers) {
