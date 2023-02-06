@@ -32,9 +32,9 @@ public class Employee {
         return zarplataEmployera;
     }
 
-    public double setZarplataEmployera(double zarplataEmployera) {
+    public void  setZarplataEmployera(double zarplataEmployera) {
         this.zarplataEmployera = zarplataEmployera;
-        return zarplataEmployera;
+
     }
 
     public int getId() {

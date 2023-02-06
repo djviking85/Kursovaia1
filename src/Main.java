@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Main {
     private static Employee[] employers = new Employee[10];
 
@@ -22,14 +20,15 @@ public class Main {
         printMinZarplataEmployer();
         // Найти сотрудника с максимальной зарплатой.
         printMaxZarplataEmployer();
-        // Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
+        // Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
         sredneeZnachenie();
         // Получить Ф. И. О. всех сотрудников (вывести в консоль).
         allNames();
         // СЛОЖНО =========================================================================================
 
-        // Проиндексировать зарплату (вызвать изменение зарплат у всех сотрудников на величину аргумента в %).
-        indexacia(10);
+        // Проиндексировать зарплату (вызвать изменение зарплат у всех сотрудников на величину аргумента в %).
+        indexacia(20);
+
         // Получить в качестве параметра номер отдела (1–5) и найти (всего 6 методов):
         // Сотрудника с минимальной зарплатой.
         sotrudnikMinZp(4);
@@ -38,7 +37,7 @@ public class Main {
         // Среднюю зарплату по отделу (учесть, что количество людей в отделе отличается от employees.length).
         sredneeZnachenieOtdela(2);
         // Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра.
-        indexaciaOtdela(10, 3);
+        indexaciaOtdela( 4);
         // Напечатать всех сотрудников отдела (все данные, кроме отдела).
         allNamesOtdel(4);
 
@@ -97,7 +96,7 @@ public class Main {
         System.out.println(maxZarplataEmpl);
     }
 
-    // Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
+    // Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
     private static void sredneeZnachenie() {
 
         int neNull = 0;
@@ -125,21 +124,23 @@ public class Main {
         }
     }
     // сложные ==========================================================
-    // Проиндексировать зарплату (вызвать изменение зарплат у всех сотрудников на величину аргумента в %).
-    private static void indexacia (double procent) {
+    // Проиндексировать зарплату (вызвать изменение зарплат у всех сотрудников на величину аргумента в %).
+    public static void indexacia (double procent) {
         double total = 0;
 
         for (Employee employee : employers) {
             if (employee != null ) {
                 employee.setZarplataEmployera(employee.getZarplataEmployera() + (employee.getZarplataEmployera() * (procent / 100)));
                 total = total + employee.getZarplataEmployera();
+
             }
         }
 
 
-            System.out.println( "Если мы проиндексируем зарплаты на " + procent + " процентов, то мы получим бюджет на зарплату: " + total+ " рублей");
+        System.out.println( "Если мы проиндексируем зарплаты на " + procent + " процентов, то мы получим бюджет на зарплату: " + total+ " рублей");
 
-        }
+    }
+
     // Получить в качестве параметра номер отдела (1–5) и найти (всего 6 методов):
     // Сотрудника с минимальной зарплатой.
     private static void sotrudnikMinZp(int numberOtdel) {
@@ -184,17 +185,17 @@ public class Main {
         System.out.println("Среднее значение по "+ numberOtdel+ " отделу, равна " + sredne/neNull + " рублей");
     }
     // Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра.
-    private static void indexaciaOtdela (double procent, int numberOtdel) {
+    private static void indexaciaOtdela ( int numberOtdel) {
         double total = 0;
 
         for (Employee employee : employers) {
             if (employee != null && employee.getNumberOtdel() == numberOtdel) {
-            employee.setZarplataEmployera(employee.getZarplataEmployera() + (employee.getZarplataEmployera() * (procent / 100)));
+
                 total = total + employee.getZarplataEmployera();
             }
         }
 
-        System.out.println(  "Если мы проиндексируем зарплаты на " + procent + " процентов, в " +numberOtdel+ " отделе, то мы получим бюджет на зарплату: " + total + " рублей");
+        System.out.println(  "Если мы проиндексируем зарплаты в " +numberOtdel+ " отделе, то мы получим бюджет на зарплату в этом отделе: " + total + " рублей");
 
     }
     // Напечатать всех сотрудников отдела (все данные, кроме отдела).
@@ -207,4 +208,3 @@ public class Main {
         }
     }
 }
-
